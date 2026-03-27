@@ -1,0 +1,36 @@
+{
+  "name": "fleet-management",
+  "main": "src/worker.js",
+  "workers_dev": true,
+  "preview_urls": true,
+  "compatibility_date": "2024-01-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "triggers": {
+    "crons": [
+      "0 4 * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "825ce755-7dee-4839-8f36-2d23a92dca62"
+    }
+  ]
+}
